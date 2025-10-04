@@ -10,7 +10,7 @@ class FooterSection extends StatelessWidget {
       color: Colors.black87,
       child: const Center(
         child: Text(
-          '© 2024 John Doe. All rights reserved.',
+          '© 2025 Matiullah Aziz. All rights reserved.',
           style: TextStyle(
             color: Colors.white70,
             fontSize: 14,
