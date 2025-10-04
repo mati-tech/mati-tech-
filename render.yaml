@@ -1,0 +1,17 @@
+services:
+  - type: static
+    name: flutter-web
+    env: static
+    buildCommand: |
+      if [ ! -d "flutter" ]; then
+        echo "Downloading Flutter 3.35.5..."
+        curl -O https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.35.5-stable.tar.xz
+        tar xf flutter_linux_3.35.5-stable.tar.xz
+        mv flutter_linux_* flutter
+      fi
+      export PATH="$PATH:$(pwd)/flutter/bin"
+      flutter --version
+      flutter config --enable-web
+      flutter pub get
+      flutter build web --release
+    publishDir: build/web

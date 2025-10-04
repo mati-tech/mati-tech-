@@ -1,0 +1,58 @@
+name: mati_tech
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+
+#dependencies:
+#  flutter:
+#    sdk: flutter
+#
+#  # The following adds the Cupertino Icons font to your application.
+#  # Use with the CupertinoIcons class for iOS style icons.
+#  cupertino_icons: ^1.0.8
+#
+#dev_dependencies:
+#  flutter_test:
+#    sdk: flutter
+#
+#
+#  flutter_lints: ^5.0.0
+#
+#
+#flutter:
+#
+#  uses-material-design: true
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  url_launcher: ^6.1.0
+  font_awesome_flutter: ^10.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/cv.pdf
+    - assets/profile.jpg
+
+#  fonts:
+#    - family: PlayfairDisplay
+#      fonts:
+#        - asset: fonts/PlayfairDisplay-Regular.ttf
+#    - family: Inter
+#      fonts:
+#        - asset: fonts/Inter-Regular.ttf
