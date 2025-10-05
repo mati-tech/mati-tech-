@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactSection extends StatefulWidget {
@@ -26,23 +27,79 @@ class _ContactSectionState extends State<ContactSection> {
     super.dispose();
   }
 
+  // Future<void> _submitForm() async {
+  //   if (_formKey.currentState!.validate()) {
+  //     setState(() {
+  //       _isSending = true;
+  //     });
+  //
+  //     // Simulate form submission
+  //     await Future.delayed(const Duration(seconds: 2));
+  //
+  //     setState(() {
+  //       _isSending = false;
+  //     });
+  //
+  //     // Show success dialog
+  //     _showSuccessDialog();
+  //   }
+  // }
   Future<void> _submitForm() async {
     if (_formKey.currentState!.validate()) {
       setState(() {
         _isSending = true;
       });
 
-      // Simulate form submission
-      await Future.delayed(const Duration(seconds: 2));
+      final String botToken = "8441909794:AAEun43MZl66jQrnuRWJI1JIc6a_r6fA6Ls";
+      final String chatId = "1237042422";
+
+      final String text =
+          "📩 New Contact Form Submission:\n"
+          "👤 Name: ${_nameController.text}\n"
+          "📧 Email: ${_emailController.text}\n"
+          "📝 Subject: ${_subjectController.text}\n"
+          "💬 Message: ${_messageController.text}";
+
+      final url =
+          "https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=${Uri.encodeComponent(text)}";
+
+      try {
+        final response = await http.get(Uri.parse(url));
+
+        if (response.statusCode == 200) {
+          // ✅ Message sent successfully
+          _showSuccessDialog();
+          _clearForm();
+        } else {
+          // ⚠️ Error
+          _showErrorDialog("Failed to send message. Please try again later.");
+        }
+      } catch (e) {
+        _showErrorDialog("Error: $e");
+      }
 
       setState(() {
         _isSending = false;
       });
-
-      // Show success dialog
-      _showSuccessDialog();
     }
   }
+
+  void _showErrorDialog(String message) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Error'),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
 
   void _showSuccessDialog() {
     showDialog(
