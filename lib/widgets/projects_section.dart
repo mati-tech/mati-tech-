@@ -34,12 +34,16 @@ class ProjectsSection extends StatelessWidget {
         'description': 'A full-featured mobile shopping application for electronics with payment integration and real-time inventory.',
         'technologies': ['Kotlin', 'Ktor', 'Posgtres'],
         'image': '💻',
+        'github': 'https://github.com/mati-tech/Storely',
+        'video' : 'https://drive.google.com/file/d/19Bj_zPsiaPd3TPvE2pSKVc58T1ta-Dch/view?usp=sharing'
       },
       {
         'title': 'The Feed',
         'description': 'A news app with realtime news from all over the world.',
         'technologies': ['Kotlin', 'News Api', 'Android'],
         'image': '📰',
+        'github': 'https://github.com/mati-tech/The-feed',
+      'video' : 'https://drive.google.com/drive/folders/1OK3up-OsueVTNnyTQ6IR4m3i_gQghDB7?usp=sharing'
       },
       {
         'title': 'MASA Learning Organization',
@@ -47,7 +51,10 @@ class ProjectsSection extends StatelessWidget {
             ' progress tracking, and collaborative classrooms.',
         'technologies': ['Java/Kotlin', 'Android', 'RoomDB'],
         'image': '📚',
+        'github': 'https://github.com/mati-tech/masa-kotlin',
+        'video' : 'https://drive.google.com/drive/folders/1741_te43MjSY5IntX61fTLOzFxN7iArp?usp=sharing'
       },
+
     ];
 
     return Wrap(
@@ -59,12 +66,15 @@ class ProjectsSection extends StatelessWidget {
           project['description'] as String,
           project['technologies'] as List<String>,
           project['image'] as String,
+          project['github'] as String,
+          project['video'] as String,
+
         );
       }).toList(),
     );
   }
 
-  Widget _buildProjectCard(String title, String description, List<String> technologies, String emoji) {
+  Widget _buildProjectCard(String title, String description, List<String> technologies, String emoji, String github, String video) {
     return Container(
       width: 360,
       decoration: BoxDecoration(
@@ -144,11 +154,11 @@ class ProjectsSection extends StatelessWidget {
                 Row(
                   children: [
                     _buildProjectButton('View Demo', Icons.visibility, () {
-                      launchUrl(Uri.parse('https://example.com/demo'));
+                      launchUrl(Uri.parse(video));
                     }),
                     const SizedBox(width: 12),
                     _buildProjectButton('GitHub', Icons.code, () {
-                      launchUrl(Uri.parse('https://github.com/example'));
+                      launchUrl(Uri.parse(github));
                     }),
                   ],
                 ),
