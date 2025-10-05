@@ -89,6 +89,8 @@ class HeaderSection extends StatelessWidget {
                 children: [
                   _buildActionButton('Download CV', Icons.download, () {
                     // Add CV download functionality
+                    launchUrl(Uri.parse("https://drive.google.com/file/d/1dG863MRz_w8T7FgCw9FU-qtV1CvOwfbH/view?usp=drive_link"));
+
                   }),
                   const SizedBox(height: 12),
                   _buildActionButton('Contact Me', Icons.email, () {
@@ -101,6 +103,7 @@ class HeaderSection extends StatelessWidget {
                 children: [
                   _buildActionButton('Download CV', Icons.download, () {
                     // Add CV download functionality
+                    launchUrl(Uri.parse("https://drive.google.com/file/d/1dG863MRz_w8T7FgCw9FU-qtV1CvOwfbH/view?usp=drive_link"));
                   }),
                   const SizedBox(width: 16),
                   _buildActionButton('Contact Me', Icons.email, () {
