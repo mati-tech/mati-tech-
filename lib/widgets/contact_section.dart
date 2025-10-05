@@ -509,7 +509,7 @@ class _ContactSectionState extends State<ContactSection> {
           _buildSocialButton(
             'Portfolio',
             Icons.public_outlined,
-            'https://mati-tech.com',
+            'https://mati-tech.info',
           ),
         ],
       ],
