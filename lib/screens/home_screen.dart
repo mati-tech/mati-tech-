@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/Certifications.dart';
 import '../widgets/header.dart';
 import '../widgets/about_section.dart';
 import '../widgets/education_timeline.dart';
@@ -24,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _skillsKey = GlobalKey();
   final GlobalKey _projectsKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
+  final GlobalKey _certificatesKey = GlobalKey();
 
   void _scrollToSection(GlobalKey key) {
     final context = key.currentContext;
@@ -57,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
         context,
         duration: const Duration(milliseconds: 800),
         curve: Curves.easeInOut,
-        alignment: 0.1, // Scroll to 10% from top (below app bar)
+        alignment: 0, // Scroll to 10% from top (below app bar)
       );
     }
   }
@@ -79,6 +81,7 @@ class _HomeScreenState extends State<HomeScreen> {
             AboutSection(key: _aboutKey),
             EducationTimeline(key: _educationKey),
             SkillsSection(key: _skillsKey),
+            CertificatesSection(key: _certificatesKey),
             ProjectsSection(key: _projectsKey),
             ContactSection(key: _contactKey),
             const FooterSection(),
@@ -115,6 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
         _buildNavItem('About', _aboutKey),
         _buildNavItem('Education', _educationKey),
         _buildNavItem('Skills', _skillsKey),
+        _buildNavItem('Certifications', _certificatesKey),
         _buildNavItem('Projects', _projectsKey),
         _buildNavItem('Contact', _contactKey),
       ],
@@ -155,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Colors.blue, Colors.purple],
+                colors: [Colors.blue, Colors.redAccent],
               ),
             ),
             child: Column(
@@ -185,6 +189,7 @@ class _HomeScreenState extends State<HomeScreen> {
           _buildMobileDrawerItem('About', _aboutKey, Icons.person),
           _buildMobileDrawerItem('Education', _educationKey, Icons.school),
           _buildMobileDrawerItem('Skills', _skillsKey, Icons.build),
+          _buildMobileDrawerItem('Certificates', _certificatesKey, Icons.document_scanner),
           _buildMobileDrawerItem('Projects', _projectsKey, Icons.work),
           _buildMobileDrawerItem('Contact', _contactKey, Icons.contact_mail),
         ],

@@ -54,6 +54,14 @@ class ProjectsSection extends StatelessWidget {
         'github': 'https://github.com/mati-tech/masa-kotlin',
         'video' : 'https://drive.google.com/drive/folders/1741_te43MjSY5IntX61fTLOzFxN7iArp?usp=sharing'
       },
+      {
+        'title': 'BitCollector',
+        'description': 'An android app for tracking crypto positions for traders.',
+        'technologies': ['Kotlin', 'Android', 'Sqlite'],
+        'image': '📈',
+        'github': 'https://github.com/mati-tech/BitCollector',
+        'video' : 'https://drive.google.com/drive/folders/19ue3OVvjaJRBH6zN89LQXH221t7ABz1s?usp=sharing'
+      },
 
     ];
 

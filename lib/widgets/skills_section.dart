@@ -39,6 +39,9 @@ class SkillsSection extends StatelessWidget {
       {'name': 'UI/UX Design', 'level': 89, 'category': 'Design/Figma'},
       {'name': 'Postgres', 'level': 95, 'category': 'Database/SQL'},
       {'name': 'Mysql', 'level': 90, 'category': 'Database/SQL'},
+      {'name': 'FastApi', 'level': 95, 'category': 'Backend'},
+      {'name': 'Docker', 'level': 89, 'category': 'DevOps'},
+      {'name': 'CI/CD', 'level': 92, 'category': 'DevOps'},
       {'name': 'Cassandra/Mongodb', 'level': 90, 'category': 'NoSQL'},
 
     ];

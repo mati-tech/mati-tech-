@@ -82,7 +82,7 @@ class AboutSection extends StatelessWidget {
               children: [
                 _buildLanguageItem('Persian', 'Native', 1.0),
                 _buildLanguageItem('English', 'Fluent', 0.85),
-                _buildLanguageItem('Russian', 'Intermediate', 0.7),
+                _buildLanguageItem('Russian', 'Intermediate', 0.8),
               ],
             ),
           ),
@@ -151,7 +151,7 @@ class AboutSection extends StatelessWidget {
           )),
               _buildLanguageItem('Persian/Dari', 'Native', 1.0),
               _buildLanguageItem('English', 'Fluent', 0.85),
-              _buildLanguageItem('Russian', 'Intermediate', 0.7),
+              _buildLanguageItem('Russian', 'Intermediate', 0.8),
             ],
           ),
         ),
