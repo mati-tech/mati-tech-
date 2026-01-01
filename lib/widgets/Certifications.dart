@@ -275,31 +275,31 @@ class CertificatesSection extends StatelessWidget {
   final List<Map<String, String>> certificates = const [
     {
       'title': 'Mobile Developer Diploma from Samsung Academy',
-      'image': 'photos/samsung.png', // Must match exactly what's in pubspec.yaml
+      'image': 'assets/photos/samsung.png', // Must match exactly what's in pubspec.yaml
       'issued_by': 'Samsung Academy, Moscow',
       'date': '2024',
     },
     {
       'title': 'Mobile Developer Diploma from Innopolis University',
-      'image': 'photos/innopolis.png', // Must match exactly what's in pubspec.yaml
+      'image': 'assets/photos/innopolis.png', // Must match exactly what's in pubspec.yaml
       'issued_by': 'Innopolis Univeristy, Russia',
       'date': '2024',
     },
     {
       'title': 'Top 200 international students of Moscow in 2024',
-      'image': 'photos/200.png', // Must match exactly what's in pubspec.yaml
+      'image': 'assets/photos/200.png', // Must match exactly what's in pubspec.yaml
       'issued_by': 'Moscow, Russia',
       'date': '2024',
     },
     {
       'title': 'Yandex dev certificate',
-      'image': 'photos/yandex.png', // Must match exactly what's in pubspec.yaml
+      'image': 'assets/photos/yandex.png', // Must match exactly what's in pubspec.yaml
       'issued_by': 'Yandex, Moscow',
       'date': '2025',
     },
     {
       'title': 'English Language Certificate',
-      'image': 'photos/english.png', // Must match exactly what's in pubspec.yaml
+      'image': 'assets/photos/english.png', // Must match exactly what's in pubspec.yaml
       'issued_by': 'efset.org',
       'date': '2022',
     }
