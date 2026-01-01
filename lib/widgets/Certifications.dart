@@ -316,7 +316,7 @@ class CertificatesSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text(
-            'Certificates',
+            'Certificates ',
             style: TextStyle(
 
               fontSize: 32,
