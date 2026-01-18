@@ -10,7 +10,6 @@ class HeaderSection extends StatelessWidget {
     final isTablet = MediaQuery.of(context).size.width < 900;
 
     return Container(
-
       height: isMobile
           ? MediaQuery.of(context).size.height * 0.85
           : MediaQuery.of(context).size.height * 0.9,
@@ -18,10 +17,7 @@ class HeaderSection extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [
-            Colors.blue.shade50,
-            Colors.purple.shade50,
-          ],
+          colors: [Colors.blue.shade50, Colors.purple.shade50],
         ),
       ),
       child: Center(
@@ -86,31 +82,42 @@ class HeaderSection extends StatelessWidget {
               SizedBox(height: isMobile ? 24 : 32),
               isMobile
                   ? Column(
-                children: [
-                  _buildActionButton('Download CV', Icons.download, () {
-                    // Add CV download functionality
-                    launchUrl(Uri.parse("https://drive.google.com/file/d/1dG863MRz_w8T7FgCw9FU-qtV1CvOwfbH/view?usp=drive_link"));
-
-                  }),
-                  const SizedBox(height: 12),
-                  _buildActionButton('Contact Me', Icons.email, () {
-                    launchUrl(Uri.parse('mailto:azizmatiullah@yahoo.com'));
-                  }),
-                ],
-              )
+                      children: [
+                        _buildActionButton('Download CV', Icons.download, () {
+                          // Add CV download functionality
+                          launchUrl(
+                            Uri.parse(
+                              "https://drive.google.com/file/d/1Ct3NlwXrJAILyjntAFFT9lg7MZGDh4li/view?usp=sharing",
+                            ),
+                          );
+                        }),
+                        const SizedBox(height: 12),
+                        _buildActionButton('Contact Me', Icons.email, () {
+                          launchUrl(
+                            Uri.parse('mailto:azizmatiullah@yahoo.com'),
+                          );
+                        }),
+                      ],
+                    )
                   : Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _buildActionButton('Download CV', Icons.download, () {
-                    // Add CV download functionality
-                    launchUrl(Uri.parse("https://drive.google.com/file/d/1dG863MRz_w8T7FgCw9FU-qtV1CvOwfbH/view?usp=drive_link"));
-                  }),
-                  const SizedBox(width: 16),
-                  _buildActionButton('Contact Me', Icons.email, () {
-                    launchUrl(Uri.parse('mailto:azizmatiullah@yahoo.com'));
-                  }),
-                ],
-              ),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        _buildActionButton('Download CV', Icons.download, () {
+                          // Add CV download functionality
+                          launchUrl(
+                            Uri.parse(
+                              "https://drive.google.com/file/d/1Ct3NlwXrJAILyjntAFFT9lg7MZGDh4li/view?usp=sharing",
+                            ),
+                          );
+                        }),
+                        const SizedBox(width: 16),
+                        _buildActionButton('Contact Me', Icons.email, () {
+                          launchUrl(
+                            Uri.parse('mailto:azizmatiullah@yahoo.com'),
+                          );
+                        }),
+                      ],
+                    ),
             ],
           ),
         ),
@@ -118,7 +125,11 @@ class HeaderSection extends StatelessWidget {
     );
   }
 
-  Widget _buildActionButton(String text, IconData icon, VoidCallback onPressed) {
+  Widget _buildActionButton(
+    String text,
+    IconData icon,
+    VoidCallback onPressed,
+  ) {
     return ElevatedButton.icon(
       onPressed: onPressed,
       icon: Icon(icon),
@@ -127,9 +138,7 @@ class HeaderSection extends StatelessWidget {
         backgroundColor: Colors.blue.shade600,
         foregroundColor: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
         minimumSize: const Size(160, 48), // Ensure good tap target
       ),
     );

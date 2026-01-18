@@ -62,6 +62,14 @@ class ProjectsSection extends StatelessWidget {
         'github': 'https://github.com/mati-tech/BitCollector',
         'video' : 'https://drive.google.com/drive/folders/19ue3OVvjaJRBH6zN89LQXH221t7ABz1s?usp=sharing'
       },
+      {
+        'title': 'Alert Bot',
+        'description': 'A telegram bot for sending Alerts on a specific price for a crypto pair!',
+        'technologies': ['Python3', 'PostgreSQL', 'FastApi'],
+        'image': '✍️',
+        'github': 'https://github.com/mati-tech/alert_bot',
+        'video' : 'https://drive.google.com/drive/folders/12MRxPLLXNjsJC7BAgaEVscNLUwKW81wB?usp=sharing'
+      },
 
     ];
 
