@@ -106,7 +106,7 @@ class HeaderSection extends StatelessWidget {
                           // Add CV download functionality
                           launchUrl(
                             Uri.parse(
-                              "https://drive.google.com/file/d/1Ct3NlwXrJAILyjntAFFT9lg7MZGDh4li/view?usp=sharing",
+                              "https://drive.google.com/file/d/1xVRp8KqrrtDZRz3-a0Tv8kcuk53XXBY6/view?usp=sharing",
                             ),
                           );
                         }),
